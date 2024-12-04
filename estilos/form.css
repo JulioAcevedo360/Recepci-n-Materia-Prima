@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    background-color: #f0f0f0; /* Agrega un color de fondo */
+}
+
+section{
+    /* height: 914px;
+    width: 480px; */
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 3rem;
+    background: linear-gradient(#acabab, rgb(233, 243, 254));
+    
+}
+
+header{
+    display: flex;   
+    width: 100%; 
+    height: 4rem;
+    align-items: center;
+    background: #e1e7e9;    
+    position: relative;
+}
+
+.imagenLogo{
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+}
+
+.arrowLeft{
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    left: 20px;   
+    
+}
+
+.arrowLeft img{
+    width: 45px;
+    height: 3.4em;    
+    color: #737373;
+}
+
+.arrowLeft:hover::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: -1; /* Coloca la sombra detrás del icono */
+}
+
+header img{
+    width: 45px;
+    height: 50px;
+}
+
+.headerText{
+    position: relative;
+    width: 100%;
+}
+
+.headerText h1{
+    text-align: center;
+    /* padding: 0 60px 0 60px; */
+    padding: 0 2rem;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+p{
+    font-weight: 700;
+    padding: 0 2rem 0rem 2rem;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centra los elementos en el eje X por defecto */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-width: 229.6px;
+}
+
+form select{
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc; /* Agrega un borde para mayor claridad */
+    background-color: #fff; /* Asegura que el fondo sea blanco */
+}
+
+form input{
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%; /* Ajusta el ancho de los campos */
+    border-radius: 8px;
+}
+
+form button{
+    padding: 1rem;
+    /* min-width: 229.6px;  */
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* #siguienteBtn{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    min-width: 229.6px;
+} */
+
+.radio-container{
+    width: 100%;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center; 
+}
+
+.radio-group label {
+    flex-grow: 2;
+    width: 1500%;
+}
+
+.radio-group input{
+    margin-right: 0;
+    flex-grow: 1;
+}
+
+input[type="submit"]:hover{
+    background-color: green;
+}
+
+button:hover{
+    background-color: green;
+}
+
+#eliminarBtn:hover{
+    background-color: red;
+}
+
+
+#siguienteBtn:hover{
+    background-color: #66cc33;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: lightgray;
+    color: black;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* Estilos para tabletas (por ejemplo, entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    contenido {
+        width: 100%;
+        align-items: center;
+    }
+    form{
+        width: 40%;
+        /* min-width: 366px; */
+    }   
+}
+
+/* Estilos para pantallas de ordenador (por ejemplo, más de 1024px) */
+@media (min-width: 1025px) {
+    header {
+        height: 5rem;
+    }
+    header img {
+        width: 50px;
+        height: 55px;
+    }
+    .headerText h1 {
+        padding: 0 4rem;
+    }
+    form{
+        width: 25%;
+    }
+}

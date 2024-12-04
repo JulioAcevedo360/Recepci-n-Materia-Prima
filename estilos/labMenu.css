@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    border: 1px solid #ccc;
+    background: linear-gradient(#acabab, rgb(233, 243, 254));
+    
+}
+
+header{
+    display: flex;   
+    width: 100%; 
+    height: 4rem;
+    align-items: center;
+    background: #e1e7e9;    
+    position: relative;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+}
+
+.imagenLogo{
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+}
+
+.logout-container{
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+}
+
+.logout-container:hover::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: -1; /* Coloca la sombra detrás del icono */
+}
+
+.arrowLeft{
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    left: 20px;   
+}
+
+.arrowLeft img{
+    width: 45px;
+    height: 3.4em;    
+    color: black;
+}
+
+.arrowLeft:hover::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: -1; /* Coloca la sombra detrás del icono */
+}
+
+.headerText{
+    position: relative;
+    flex: 1; /* Ocupa el espacio restante */
+    text-align: center;
+}
+
+.headerText h1{
+    text-align: center;
+    padding: 0 1rem; /* Reduce el padding en dispositivos pequeños */
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem; /* Agrega espaciado */
+}
+
+.card2 {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(50% - 2rem); /* Ajusta el ancho para que sean 2 tarjetas por fila */
+    width: 272px;
+    height: 254px;
+    background: #e4e0e0;
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;      
+    user-select: none;    
+    color: black;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1rem;
+    align-items: center;
+}
+
+.card2:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+    font-weight: bolder;
+    align-items: center;
+}
+
+.containerText2 {
+    padding: 2px 16px;
+    color: #a6a6a6;
+    font-size: 2rem;
+    align-items: center;
+    transform-origin: center center; /* Define el punto de transformación en el centro */
+}
+
+.svg-inline--fa{
+    height: 8em;
+    color: #a6a6a6;
+}
+
+.svg-inline--fa:active{
+    color: #737373;
+}
+
+.icon-card{
+    height: 8em;
+}
+
+.icon-card:active{
+    fill: #737373;
+}
+
+
+
+
+/* Estilos para pantallas de ordenador (por ejemplo, más de 1024px) */
+@media (min-width: 1025px) {
+    header {
+        height: 5rem;
+    }
+    header img {
+        width: 50px;
+        height: 55px;
+    }
+    .headerText h1 {
+        padding: 0 4rem;
+    }
+   
+}
